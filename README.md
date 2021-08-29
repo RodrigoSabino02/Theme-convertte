@@ -18,11 +18,6 @@
 :white_check_mark: : colocar a bio nos cards</br>
 
 
-
-primeiro eu consumi uma api para pegar varios filmes que tinham um titulo parecido, e dessa api eu </br>peguei o titulo e o poster do filme</br>
-injetei os dados consumidos pela api dentro do html percorrendo o foreach</br>
-coloquei a bio porem ta pegando a msm bio para todos os filmes(a bio do ultimo filme do array)</br>
-
 # a fazer
 :x: listar as bios de acordo com o filme</br>
 
