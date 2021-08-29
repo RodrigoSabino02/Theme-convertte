@@ -35,7 +35,7 @@ function custom_post_type_noticias() {
 		'label'                 => __( 'Noticia', 'text_domain' ),
 		'description'           => __( 'descrição da noticia', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array('title', 'tag', 'editor', 'thumbnail', 'author', 'excerpt'),
+		'supports'              => array('title', 'tag', 'thumbnail', 'author', 'excerpt'),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,

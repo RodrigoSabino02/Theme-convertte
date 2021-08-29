@@ -35,7 +35,7 @@ function custom_post_type_mimos() {
 		'label'                 => __( 'Mimo', 'text_domain' ),
 		'description'           => __( 'descrição do mimo', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array('title', 'tag', 'editor', 'thumbnail', 'author', 'excerpt'),
+		'supports'              => array('title', 'editor', 'thumbnail'),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
