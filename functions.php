@@ -16,5 +16,7 @@ function convertte_theme_scripts(){
     wp_enqueue_script('javascript', get_template_directory_uri() . '/assets/js/mem-c1ad69.js', array('jquery'));
 }
 
+add_action('wp_enqueue_scripts', 'convertte_theme_scripts');
+
 
 ?>

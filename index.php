@@ -7,8 +7,6 @@
 
     foreach($Result->Search as $ID) {
       $id = $ID->imdbID;
-
-
   };
 
   $url2 = "http://www.omdbapi.com/?i=".$id."&apikey=166c0fc3";
