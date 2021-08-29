@@ -18,5 +18,9 @@ function convertte_theme_scripts(){
 
 add_action('wp_enqueue_scripts', 'convertte_theme_scripts');
 
+require get_template_directory() . '/custom_post_type/noticias.php';
+require get_template_directory() . '/custom_post_type/podcasts.php';
+require get_template_directory() . '/custom_post_type/mimos.php';
+
 
 ?>
