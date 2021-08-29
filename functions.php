@@ -1,5 +1,12 @@
 <?php
 
+add_action('after_setup_theme', 'convertte_theme_setup');
+function convertte_theme_setup(){
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
+
+}
+
 add_action('wp_enqueue_scripts', 'convertte_theme_scripts');
 function convertte_theme_scripts(){
     wp_enqueue_style('components', get_template_directory_uri() . '/assets/css/components.css');
