@@ -10,6 +10,7 @@
 :white_check_mark: Footer </br>
 :white_check_mark: functions </br>
 
+:fast_forward: API </br>
 :white_check_mark: : Consumir a api </br>
 :white_check_mark: : listar os filmes</br>
 :white_check_mark: : colocar o Title e o Poster nos cards</br>
