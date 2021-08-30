@@ -4,7 +4,11 @@
 
 # Resultado
 
+<<<<<<< HEAD
   ![Alt Text](https://media.giphy.com/media/ZBxAYY9tz8evYvKddu/giphy.gif?cid=790b7611e47bab0231183fece52bc6b0fcc531a46d3d1dc2&rid=giphy.gif&ct=g)
+=======
+  ![Alt Text](https://media.giphy.com/media/Q7qQMZQY39ULTy0l1Q/giphy.gif)
+>>>>>>> 00c90e955412bac3eb37230da0d356d6429728ed
 
 # Feito
 
