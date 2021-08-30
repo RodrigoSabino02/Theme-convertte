@@ -27,17 +27,26 @@
     <div class="wrapper">
       <div data-animation="slide" data-duration="600" data-infinite="1" id="Hero" class="slider-v2 w-slider">
         <div class="w-slider-mask">
-          <div class="slide w-slide">
+        <?php 
+          $slider = array('post_type' => 'noticias', 'posts_per_page' => 3,);
+          $query_slider = new WP_Query( $slider );
+        ?>
+
+        <?php
+          if($query_slider->have_posts() ) : while($query_slider->have_posts() ) : $query_slider->the_post();
+        ?>
+
+            <div class="slide w-slide">
             <div class="slide-v2">
               <div class="wrapper">
                 <div class="slide-v2-content">
-                  <a href="#" class="badge">NOME DA CATEGORIA</a>
+                  <a href="#" class="badge">Noticias</a>
                   <a href="#" class="slide-heading-link w-inline-block">
-                    <h2 class="slide-v2-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h2>
+                    <h2 class="slide-v2-heading"><?php the_title(); ?></h2>
                   </a>
                   <div class="post-info text-white">
                     <a href="#" class="post-info-author text-white w-inline-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07fbe2288da7_user-white.svg" alt="" class="mini-icon">
-                      <div>Aldo Luiz</div>
+                      <div><?php the_author(); ?></div>
                       <div class="divider-small transparent"></div>
                     </a>
                     <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07d071288d94_calendar-white.svg" alt="" class="mini-icon">
@@ -45,8 +54,8 @@
                     </div>
                     <div class="post-info-block">
                       <div class="divider-small transparent"></div><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073d8e288d91_clock-white.svg" alt="" class="mini-icon">
-                      <div>03</div>
-                      <div> min leitura</div>
+                      <div><?php the_content(); ?></div>
+                      <div><?php the_content(); ?></div>
                     </div>
                   </div>
                 </div>
@@ -54,61 +63,12 @@
               <div class="slide-v2-image"></div>
             </div>
           </div>
-          <div class="slide w-slide">
-            <div class="slide-v2">
-              <div class="wrapper">
-                <div class="slide-v2-content">
-                  <a href="#" class="badge">NOME DA CATEGORIA</a>
-                  <a href="#" class="slide-heading-link w-inline-block">
-                    <h2 class="slide-v2-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h2>
-                  </a>
-                  <div class="post-info text-white">
-                    <a href="#" class="post-info-author text-white w-inline-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07fbe2288da7_user-white.svg" alt="" class="mini-icon">
-                      <div>Aldo Luiz</div>
-                      <div class="divider-small transparent"></div>
-                    </a>
-                    <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07d071288d94_calendar-white.svg" alt="" class="mini-icon">
-                      <div>Federal</div>
-                    </div>
-                    <div class="post-info-block">
-                      <div class="divider-small transparent"></div><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073d8e288d91_clock-white.svg" alt="" class="mini-icon">
-                      <div>03</div>
-                      <div> min leitura</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slide-v2-image"></div>
-            </div>
-          </div>
-          <div class="slide w-slide">
-            <div class="slide-v2">
-              <div class="wrapper">
-                <div class="slide-v2-content">
-                  <a href="#" class="badge">NOME DA CATEGORIA</a>
-                  <a href="#" class="slide-heading-link w-inline-block">
-                    <h2 class="slide-v2-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h2>
-                  </a>
-                  <div class="post-info text-white">
-                    <a href="#" class="post-info-author text-white w-inline-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07fbe2288da7_user-white.svg" alt="" class="mini-icon">
-                      <div>Aldo Luiz</div>
-                      <div class="divider-small transparent"></div>
-                    </a>
-                    <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07d071288d94_calendar-white.svg" alt="" class="mini-icon">
-                      <div>Federal</div>
-                    </div>
-                    <div class="post-info-block">
-                      <div class="divider-small transparent"></div><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073d8e288d91_clock-white.svg" alt="" class="mini-icon">
-                      <div>03</div>
-                      <div> min leitura</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slide-v2-image"></div>
-            </div>
-          </div>
-        </div>
+
+        <?php endwhile;?>
+        <?php else: ?>
+      <?php endif; ?>
+
+         
         <div class="slider-arrow w-slider-arrow-left">
           <div class="slider-arrow-button"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073ffd288d8a_left.svg" alt="" class="slider-arrow-icon"></div>
         </div>
@@ -129,26 +89,49 @@
         </a>
         <div class="header-line"></div>
       </div>
-      <div class="w-layout-grid grid-v1">
+
+      <?php 
+          $noticia = array('post_type' => 'noticias', 'posts_per_page' => 1,);
+          $query_noticia = new WP_Query( $noticia );
+        ?>
+
+        <?php
+          if($query_noticia->have_posts() ) : while($query_noticia->have_posts() ) : $query_noticia->the_post();
+        ?>
+
+        <div class="w-layout-grid grid-v1">
         <div class="post-card">
           <a href="#" class="thumbnail-medium w-inline-block">
             <div class="badge">TAG</div>
             <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-3"></div>
           </a>
           <a href="#" class="post-heading-link w-inline-block">
-            <h4 class="post-heading-medium">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h4>
+            <h4 class="post-heading-medium"><?php the_title(); ?></h4>
           </a>
           <div class="post-info">
             <div class="post-info-block"><img src="images/clock.svg" alt="" class="mini-icon-grey">
-              <div>Aldo Luiz</div>
+              <div><?php the_author(); ?></div>
             </div>
             <div class="post-info-block">
               <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-              <div>03</div>
-              <div> min leitura</div>
+              <div><?php the_content(); ?></div>
             </div>
           </div>
         </div>
+
+        <?php endwhile;?>
+        <?php else: ?>
+      <?php endif; ?>
+
+      <?php 
+          $noticias = array('post_type' => 'noticias', 'posts_per_page' => 3,);
+          $query_noticias = new WP_Query( $noticias );
+        ?>
+
+        <?php
+          if($query_noticias->have_posts() ) : while($query_noticias->have_posts() ) : $query_noticias->the_post();
+        ?>
+
         <div>
           <div class="post-mini">
             <a href="#" class="post-mini-thumbnail w-inline-block">
@@ -156,7 +139,7 @@
             </a>
             <div class="post-mini-content">
               <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-mini-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h5>
+                <h5 class="post-mini-heading"><?php the_title(); ?></h5>
               </a>
               <div class="post-info">
                 <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae071d79288d77_calendar.svg" alt="" class="mini-icon-grey">
@@ -164,64 +147,21 @@
                 </div>
                 <div class="post-info-block">
                   <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>Aldo Luiz</div>
+                  <div><?php the_author(); ?></div>
                 </div>
                 <div class="post-info-block">
                   <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>03</div>
-                  <div> min leitura</div>
+                  <div><?php the_content(); ?></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="post-mini">
-            <a href="#" class="post-mini-thumbnail w-inline-block">
-              <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt=""></div>
-            </a>
-            <div class="post-mini-content">
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-mini-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h5>
-              </a>
-              <div class="post-info">
-                <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae071d79288d77_calendar.svg" alt="" class="mini-icon-grey">
-                  <div>Federal</div>
-                </div>
-                <div class="post-info-block">
-                  <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>Aldo Luiz</div>
-                </div>
-                <div class="post-info-block">
-                  <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>03</div>
-                  <div> min leitura</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-mini">
-            <a href="#" class="post-mini-thumbnail w-inline-block">
-              <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt=""></div>
-            </a>
-            <div class="post-mini-content">
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-mini-heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy…</h5>
-              </a>
-              <div class="post-info">
-                <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae071d79288d77_calendar.svg" alt="" class="mini-icon-grey">
-                  <div>Federal</div>
-                </div>
-                <div class="post-info-block">
-                  <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>Aldo Luiz</div>
-                </div>
-                <div class="post-info-block">
-                  <div class="divider-small"></div><img src="images/clock.svg" alt="" class="mini-icon-grey">
-                  <div>03</div>
-                  <div> min leitura</div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <?php endwhile;?>
+        <?php else: ?>
+      <?php endif; ?>
+
+
         </div>
       </div>
     </div>
