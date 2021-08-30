@@ -270,103 +270,35 @@
       </div>
       <div data-animation="slide" data-duration="600" data-infinite="1" class="slider-v3 w-slider">
         <div class="w-slider-mask">
-          <div class="slide-v3 w-slide">
+
+        <?php 
+          $mimos = array('post_type' => 'mimos', 'posts_per_page' => 4,);
+          $query_mimos = new WP_Query( $mimos );
+        ?>
+
+        <?php
+          if($query_mimos->have_posts() ) : while($query_mimos->have_posts() ) : $query_mimos->the_post();
+        ?>
+
+                  <div class="slide-v3 w-slide">
             <div class="post-card mimo-card">
               <a href="#" class="thumbnail-small w-inline-block">
                 <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-2"></div>
               </a>
               <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
+                <h5 class="post-heading-small"><?php the_title(); ?></h5>
               </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
+              <p class="paragraph"><?php the_content(); ?></p>
               <a href="#" class="button w-button">Baixar agora</a>
             </div>
           </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/background-image.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/background-image.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/background-image.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-          <div class="slide-v3 w-slide">
-            <div class="post-card mimo-card">
-              <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/background-image.svg" loading="lazy" alt="" class="image-2"></div>
-              </a>
-              <a href="#" class="post-heading-link w-inline-block">
-                <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
-              </a>
-              <p class="paragraph">Questões Enem 2013 atualizadas.</p>
-              <a href="#" class="button w-button">Baixar agora</a>
-            </div>
-          </div>
-        </div>
+
+        <?php endwhile;?>
+        <?php else: ?>
+      <?php endif; ?>
+
+
+
         <div class="slider-v3-arrow left w-slider-arrow-left"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073ffd288d8a_left.svg" alt="" class="slider-v5-arrow-icon"></div>
         <div class="slider-v3-arrow w-slider-arrow-right"><img src="images/right.svg" alt="" class="slider-v5-arrow-icon"></div>
         <div class="slider-v5-nav w-slider-nav w-round"></div>
@@ -384,12 +316,12 @@
       <div data-animation="slide" data-duration="600" data-infinite="1" class="slider-v3 slider-v4 w-slider">
         <div class="w-slider-mask">
         <?php 
-          $args = array('post_type' => 'podcasts', 'posts_per_page' => 3,);
-          $query = new WP_Query( $args );
+          $podcasts = array('post_type' => 'podcasts', 'posts_per_page' => 3,);
+          $query_podcasts = new WP_Query( $podcasts );
         ?>
 
         <?php
-          if($query->have_posts() ) : while($query->have_posts() ) : $query->the_post();
+          if($query_podcasts->have_posts() ) : while($query_podcasts->have_posts() ) : $query_podcasts->the_post();
         ?>
 
           <div class="slide-v3 slide-v5 w-slide">
@@ -401,9 +333,9 @@
               </div>
               <div>
                 <a href="#" class="post-heading-link w-inline-block">
-                  <h5 class="post-heading-small">CADERNO DE QUESTÕES</h5>
+                  <h5 class="post-heading-small"><?php the_title(); ?></h5>
                 </a>
-                <p class="paragraph">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
+                <p class="paragraph"><?php the_content(); ?></p>
               </div>
             </div>
           </div>
@@ -439,3 +371,5 @@
     </div>
   </div>
   <?php get_footer(); ?>
+
+
