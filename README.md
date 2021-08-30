@@ -2,6 +2,10 @@
 
 # Processo Seletivo
 
+# Resultado
+
+  ![Alt Text](https://media.giphy.com/media/IrQ3XyqrpKKn97KIBc/giphy.gif?cid=790b7611b4b8ccdff7888894cf41e364b586be8b550718d1&rid=giphy.gif&ct=g)
+
 # Feito
 
 :fast_forward: Tema WP </br>
@@ -22,7 +26,7 @@
 
 # a fazer
 :x: listar as bios de acordo com o filme</br>
-:x: Dinamizar noticias </br>
+:x: colocar as tags nas noticias </br>
 
 fazer que cada card tenha a sua bio especifica</br>
 
