@@ -28,7 +28,7 @@
       <div data-animation="slide" data-duration="600" data-infinite="1" id="Hero" class="slider-v2 w-slider">
         <div class="w-slider-mask">
         <?php 
-          $slider = array('post_type' => 'noticias', 'posts_per_page' => 3,);
+          $slider = array('post_type' => 'slider', 'posts_per_page' => 3,);
           $query_slider = new WP_Query( $slider );
         ?>
 
@@ -45,22 +45,22 @@
                     <h2 class="slide-v2-heading"><?php the_title(); ?></h2>
                   </a>
                   <div class="post-info text-white">
-                    <a href="#" class="post-info-author text-white w-inline-block"><?php the_post_thumbnail(); ?>
+                    <a href="#" class="post-info-author text-white w-inline-block">
                       <div><?php the_author(); ?></div>
                       <div class="divider-small transparent"></div>
                     </a>
-                    <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07d071288d94_calendar-white.svg" alt="" class="mini-icon">
+                    <div class="post-info-block">
                       <div>noticia</div>
                     </div>
                     <div class="post-info-block">
-                      <div class="divider-small transparent"></div><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073d8e288d91_clock-white.svg" alt="" class="mini-icon">
+                      <div class="divider-small transparent"></div>
                       <div><?php the_content(); ?></div>
                       <div><?php the_content(); ?></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="slide-v2-image"></div>
+              <div class="slide-v2-image"><?php the_post_thumbnail(); ?></div>
             </div>
           </div>
 

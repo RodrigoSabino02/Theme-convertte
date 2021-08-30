@@ -823,6 +823,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.6;
+  width: 100%;
+  height: 100%;
 }
 
 .post-info-block {
@@ -914,7 +916,7 @@ body {
 
 .section {
   z-index: 2;
-  padding: 24px 32px;
+  padding: 24px 0 0;
 }
 
 .section.top-section {
@@ -1932,6 +1934,7 @@ body {
 }
 
 .footer-3 {
+  margin-top: 20px;
   padding-top: 10px;
   padding-bottom: 48px;
   background-color: #191919;

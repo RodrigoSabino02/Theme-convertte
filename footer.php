@@ -1,5 +1,24 @@
 <?php wp_footer(); ?>
-
+<div class="section-2 bg-gray-4 dn">
+    <div class="main-container">
+      <div class="container-large align-center justify-content-center">
+        <h4 class="large-heading section-title">Quer o MEM na palma da mão?</h4>
+      </div>
+      <div class="container-large align-center">
+        <div class="hero-subscribe-form w-form">
+          <form id="wf-form-Wide-Subscribe-Form" name="wf-form-Wide-Subscribe-Form" data-name="Wide Subscribe Form">
+            <div class="form-horizontal"><input type="email" class="form-input form-input-large w-input" maxlength="256" name="Email-Address-2" data-name="Email Address 2" placeholder="Informe seu melhor email" id="Email-Address-2" required=""><input type="submit" value="Enviar" data-wait="Please wait..." class="button-2 form-horizontal-button button-large w-button"></div>
+          </form>
+          <div class="form-success-2 w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="form-error-2 w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="footer-3">
     <div class="main-container">
       <div class="footer-1-top">
