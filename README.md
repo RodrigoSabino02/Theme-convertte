@@ -22,7 +22,7 @@
 
 # a fazer
 :x: listar as bios de acordo com o filme</br>
-:x: Dinamizar noticias </br>
+:x: colocar as tags nas noticias </br>
 
 fazer que cada card tenha a sua bio especifica</br>
 
