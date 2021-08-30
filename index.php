@@ -45,12 +45,12 @@
                     <h2 class="slide-v2-heading"><?php the_title(); ?></h2>
                   </a>
                   <div class="post-info text-white">
-                    <a href="#" class="post-info-author text-white w-inline-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07fbe2288da7_user-white.svg" alt="" class="mini-icon">
+                    <a href="#" class="post-info-author text-white w-inline-block"><?php the_post_thumbnail(); ?>
                       <div><?php the_author(); ?></div>
                       <div class="divider-small transparent"></div>
                     </a>
                     <div class="post-info-block"><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae07d071288d94_calendar-white.svg" alt="" class="mini-icon">
-                      <div>Federal</div>
+                      <div>noticia</div>
                     </div>
                     <div class="post-info-block">
                       <div class="divider-small transparent"></div><img src="https://uploads-ssl.webflow.com/5fa443314944220d73966316/5fa443310cae073d8e288d91_clock-white.svg" alt="" class="mini-icon">
@@ -103,7 +103,7 @@
         <div class="post-card">
           <a href="#" class="thumbnail-medium w-inline-block">
             <div class="badge">TAG</div>
-            <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-3"></div>
+            <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
           </a>
           <a href="#" class="post-heading-link w-inline-block">
             <h4 class="post-heading-medium"><?php the_title(); ?></h4>
@@ -135,7 +135,7 @@
         <div>
           <div class="post-mini">
             <a href="#" class="post-mini-thumbnail w-inline-block">
-              <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt=""></div>
+              <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
             </a>
             <div class="post-mini-content">
               <a href="#" class="post-heading-link w-inline-block">
@@ -223,7 +223,7 @@
                   <div class="slide-v3 w-slide">
             <div class="post-card mimo-card">
               <a href="#" class="thumbnail-small w-inline-block">
-                <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image-2"></div>
+                <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
               </a>
               <a href="#" class="post-heading-link w-inline-block">
                 <h5 class="post-heading-small"><?php the_title(); ?></h5>
@@ -268,7 +268,7 @@
             <div class="post-card podcast-card">
               <div class="div-block div-podcast">
                 <a href="#" class="thumbnail-small w-inline-block">
-                  <div class="thumbnail"><img src="images/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image image-podcast"></div>
+                  <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
                 </a>
               </div>
               <div>
